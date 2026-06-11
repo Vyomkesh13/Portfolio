@@ -507,10 +507,18 @@ section { padding: 6rem 2.5rem; position: relative; z-index: 1; }
 }
 .skill-cluster::before {
   content: '';
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(135deg, rgba(0,255,179,0.03) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.skill-cluster a,
+.skill-cluster button {
+  position: relative;
+  z-index: 2;
 }
 .skill-cluster:hover { border-color: rgba(0,255,179,0.2); transform: translateY(-2px); }
 .skill-cluster:hover::before { opacity: 1; }
